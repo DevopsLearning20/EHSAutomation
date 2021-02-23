@@ -1,0 +1,1060 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>EHS</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@c43b89d03a7c43dae8bb8f0f078bad1997af6b3b/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report dark">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Regression Report</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Feb 23, 2021 06:00:06 AM</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Feb 23, 2021 06:00:06 AM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Feb 23, 2021 06:01:53 AM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>0</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>3</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='0%'>
+<b>0</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='100%'><b>3</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='72%'><b>8</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='27%'><b>3</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='91%'><b>41</b> steps passed</small></div>
+<div>
+<small data-tooltip='6%'><b>3</b> steps failed,
+<b>1</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"As an administrator of the EHS system I want to be able to see all the available products so that":58.134,"As an administrator of the EHS system I want to se detailed information about a specific product so that I know that the system is up to date":18.819,"As an administrator of the EHS system I want to be able to search for a specific product so that":27.878
+};
+</script>
+<div class="row">
+<div class="col-md-4 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>@StoryOne</td>
+<td>5</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>71.429%</td>
+</tr>
+<tr>
+<td>@Find</td>
+<td>2</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>@itemPage</td>
+<td>1</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>33.333%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-md-4 sysenv-container">
+<div class="card">
+<div class="card-header"><p>System/Environment</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td>build</td>
+<td>1.1</td>
+</tr>
+<tr>
+<td>user</td>
+<td>Jayant Kale</td>
+</tr>
+<tr>
+<td>AppName</td>
+<td>EHS</td>
+</tr>
+<tr>
+<td>os</td>
+<td>Windows</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 0,
+failParent: 3,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 8,
+failChild: 3,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 41,
+failGrandChild: 3,
+warningGrandChild: 0,
+skipGrandChild: 1,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script><div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">@StoryOne</a><a class="dropdown-item" href="#">@Find</a><a class="dropdown-item" href="#">@itemPage</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="fail" test-id="1"
+          author=""
+          tag="@StoryOne"
+          device="">
+          <div class="test-detail">
+            <p class="name">As an administrator of the EHS system I want to be able to see all the available products so that</p>
+            <p class="text-sm">
+              <span>06:00:08 AM</span> / <span>00:00:58:134</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">As an administrator of the EHS system I want to be able to see all the available products so that</h5>
+<span class='badge badge-success'>02.23.2021 06:00:08</span>
+<span class='badge badge-danger'>02.23.2021 06:01:06</span>
+<span class='badge badge-default'>00:00:58:134</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">@StoryOne</span></div>
+<div class="m-t-10 m-l-5"> I can make faster decisions</div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Get the list of all item from item List</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinations.EHSHomeSteps.launchTheApplication()">
+                <span>Given launch the application</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinations.EHSHomeSteps.userIsOnAllListItemScreen()">
+                <span>Given User is on all list item screen</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinations.EHSHomeSteps.userCaptureAllTheListInfo()">
+                <span>When User capture all the list info</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinations.EHSHomeSteps.allItemShouldBeVisibleOnTheScreen()">
+                <span>Then all item should be visible on the screen</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="11"><span class="badge log pass-bg mr-2">Pass</span>Get the total count of the item</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinations.EHSHomeSteps.launchTheApplication()">
+                <span>Given launch the application</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinations.EHSHomeSteps.userIsOnAllListItemScreen()">
+                <span>Given User is on all list item screen</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinations.EHSHomeSteps.userCountsTheTotalItems()">
+                <span>When User counts the total items</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinations.EHSHomeSteps.totalCountsShouldBe(int)">
+                <span>Then Total counts should be 9</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="20"><span class="badge log pass-bg mr-2">Pass</span>Get the count of open button</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinations.EHSHomeSteps.launchTheApplication()">
+                <span>Given launch the application</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinations.EHSHomeSteps.userIsOnAllListItemScreen()">
+                <span>Given User is on all list item screen</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinations.EHSHomeSteps.userCountsTheTotalItems()">
+                <span>When User counts the total items</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinations.EHSHomeSteps.totalCountsShouldBe(int)">
+                <span>Then Total counts should be 9</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="29"><span class="badge log fail-bg mr-2">Fail</span>Validate the EHS Home Page</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinations.EHSHomeSteps.launchTheApplication()">
+                <span>Given launch the application</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="StepDefinations.EHSHomeSteps.homePageTitleShouldBe(java.lang.String)">
+                <span>Then home page title should be "EHS - Home"</span>
+      <div>
+        <textarea disabled class="code-block">org.junit.ComparisonFailure: expected:<[]> but was:<[EHS - Home]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at StepDefinations.EHSHomeSteps.homePageTitleShouldBe(EHSHomeSteps.java:56)
+	at ✽.home page title should be "EHS - Home"(file:///E:/Automation/EHSAutomation/src/test/resources/AppFeatures/StoryOne.feature:24)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER">
+                <span>StepDefinations.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Validate_the_EHS_Home_Page
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../embedded1.png' src="../embedded1.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="36"><span class="badge log pass-bg mr-2">Pass</span>Validate the EHS All Items page</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinations.EHSHomeSteps.launchTheApplication()">
+                <span>Given launch the application</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinations.EHSHomeSteps.userOnEHSAllItemsPage()">
+                <span>Given user on EHS all items page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinations.EHSHomeSteps.allItemPageTitleShouldBe(java.lang.String)">
+                <span>Then all item page title should be "EHS - All Items"</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="44"><span class="badge log pass-bg mr-2">Pass</span>validate the EHS WebPage Elements are present on Web page</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinations.EHSHomeSteps.launchTheApplication()">
+                <span>Given launch the application</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinations.EHSHomeSteps.validateTheProductIdLabelInputFieldFindButtonAndListAllItemsButton()">
+                <span>When validate the productId label input field Find button and list all items button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinations.EHSHomeSteps.productidElementShouldBeVisibleOnPage()">
+                <span>Then productId element should be visible on page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinations.EHSHomeSteps.userShouldSeeTheClickableInputField()">
+                <span>And user should see the clickable input field</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinations.EHSHomeSteps.findButtonShouldBeDisplayOnTheScreen()">
+                <span>And find button should be display on the screen</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinations.EHSHomeSteps.findButtonShouldBeDisplayOnTheScreen()">
+                <span>And find button should be display on the screen</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinations.EHSHomeSteps.listAllItemButtonShouldBeClickableOnScreen()">
+                <span>And list all item button should be clickable on screen</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="56"
+          author=""
+          tag="@itemPage"
+          device="">
+          <div class="test-detail">
+            <p class="name">As an administrator of the EHS system I want to se detailed information about a specific product so that I know that the system is up to date</p>
+            <p class="text-sm">
+              <span>06:01:06 AM</span> / <span>00:00:18:819</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">As an administrator of the EHS system I want to se detailed information about a specific product so that I know that the system is up to date</h5>
+<span class='badge badge-success'>02.23.2021 06:01:06</span>
+<span class='badge badge-danger'>02.23.2021 06:01:25</span>
+<span class='badge badge-default'>00:00:18:819</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=56</span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">@itemPage</span></div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="57"><span class="badge log pass-bg mr-2">Pass</span>validate the item1 details</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="58"><span class="badge log pass-bg mr-2">Pass</span>validate the item1 details</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given launch the application</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given User is on all list item screen</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User click on Open button for item</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then ehs item page should be display</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Item should have "STD 1""EHS Item 1""Bronze""Boston Item LLC""$53.50"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="68"><span class="badge log fail-bg mr-2">Fail</span>Validate the tile of EHS Item screen</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinations.EHSHomeSteps.launchTheApplication()">
+                <span>Given launch the application</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinations.EHSHomeSteps.userIsOnAllListItemScreen()">
+                <span>Given User is on all list item screen</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinations.SpecificProductSteps.userClickOnOpenButtonForItem()">
+                <span>When User click on Open button for item</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" >
+                <span>When user gets the title of the page</span>
+      <div>Step undefined
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>Then page title should be "find.html?ProductIdField=STD+1"</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="78"
+          author=""
+          tag="@Find"
+          device="">
+          <div class="test-detail">
+            <p class="name">As an administrator of the EHS system I want to be able to search for a specific product so that</p>
+            <p class="text-sm">
+              <span>06:01:25 AM</span> / <span>00:00:27:878</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">As an administrator of the EHS system I want to be able to search for a specific product so that</h5>
+<span class='badge badge-success'>02.23.2021 06:01:25</span>
+<span class='badge badge-danger'>02.23.2021 06:01:53</span>
+<span class='badge badge-default'>00:00:27:878</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=78</span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">@Find</span></div>
+<div class="m-t-10 m-l-5"> I can get faster access to its product details.</div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="79"><span class="badge log fail-bg mr-2">Fail</span>Find the valid Item id</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinations.EHSHomeSteps.launchTheApplication()">
+                <span>Given launch the application</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinations.StoryThreeSteps.userEntersTheValidProductId(java.lang.String)">
+                <span>When user enters the valid product id "2"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="StepDefinations.StoryThreeSteps.userShouldGetTheProductId(java.lang.String)">
+                <span>Then user should get the product id "2"</span>
+      <div>
+        <textarea disabled class="code-block">org.junit.ComparisonFailure: expected:<[Not Found!]> but was:<[2]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at StepDefinations.StoryThreeSteps.userShouldGetTheProductId(StoryThreeSteps.java:37)
+	at ✽.user should get the product id "2"(file:///E:/Automation/EHSAutomation/src/test/resources/AppFeatures/SwtoryThree.feature:10)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER">
+                <span>StepDefinations.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Find_the_valid_Item_id
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../embedded2.png' src="../embedded2.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="87"><span class="badge log pass-bg mr-2">Pass</span>Find Invalid Item id</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinations.EHSHomeSteps.launchTheApplication()">
+                <span>Given launch the application</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinations.StoryThreeSteps.userEntersTheInvalidProductId(java.lang.String)">
+                <span>When user enters the Invalid product id "25"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinations.StoryThreeSteps.userShouldGetWarning(java.lang.String)">
+                <span>Then user should get warning "Not Found!"</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="95"><span class="badge log pass-bg mr-2">Pass</span>Find with Blank Item</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinations.EHSHomeSteps.launchTheApplication()">
+                <span>Given launch the application</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinations.StoryThreeSteps.userClickOnFindButtonWithoutEnterProductId()">
+                <span>When user click on find button without enter product id</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinations.StoryThreeSteps.userShouldGetWarning(java.lang.String)">
+                <span>Then user should get warning "Not Found!"</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">3</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>5</span>
+<span class='badge log badge-danger'>2</span>
+</span>
+<p class="name">@StoryOne</p>
+<p class="duration text-sm">7 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@StoryOne</h4>
+<span status="pass" class='badge log pass-bg'>5 passed</span>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>06:00:08 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>As an administrator of the EHS system I want to be able to see all the available products so that</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>06:00:08 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Get the list of all item from item List</a>
+<div class="">
+<span class="badge badge-default">As an administrator of the EHS system I want to be able to see all the available products so that.Get the list of all item from item List</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>06:00:22 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='11'>Get the total count of the item</a>
+<div class="">
+<span class="badge badge-default">As an administrator of the EHS system I want to be able to see all the available products so that.Get the total count of the item</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>06:00:31 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='20'>Get the count of open button</a>
+<div class="">
+<span class="badge badge-default">As an administrator of the EHS system I want to be able to see all the available products so that.Get the count of open button</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>06:00:40 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='29'>Validate the EHS Home Page</a>
+<div class="">
+<span class="badge badge-default">As an administrator of the EHS system I want to be able to see all the available products so that.Validate the EHS Home Page</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>06:00:48 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='36'>Validate the EHS All Items page</a>
+<div class="">
+<span class="badge badge-default">As an administrator of the EHS system I want to be able to see all the available products so that.Validate the EHS All Items page</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>06:00:57 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='44'>validate the EHS WebPage Elements are present on Web page</a>
+<div class="">
+<span class="badge badge-default">As an administrator of the EHS system I want to be able to see all the available products so that.validate the EHS WebPage Elements are present on Web page</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+<span class='badge log badge-danger'>2</span>
+</span>
+<p class="name">@Find</p>
+<p class="duration text-sm">4 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Find</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>06:01:25 AM</td>
+<td>
+<a href="#" class="linked" test-id='78' id='78'>As an administrator of the EHS system I want to be able to search for a specific product so that</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>06:01:25 AM</td>
+<td>
+<a href="#" class="linked" test-id='78' id='79'>Find the valid Item id</a>
+<div class="">
+<span class="badge badge-default">As an administrator of the EHS system I want to be able to search for a specific product so that.Find the valid Item id</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>06:01:35 AM</td>
+<td>
+<a href="#" class="linked" test-id='78' id='87'>Find Invalid Item id</a>
+<div class="">
+<span class="badge badge-default">As an administrator of the EHS system I want to be able to search for a specific product so that.Find Invalid Item id</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>06:01:44 AM</td>
+<td>
+<a href="#" class="linked" test-id='78' id='95'>Find with Blank Item</a>
+<div class="">
+<span class="badge badge-default">As an administrator of the EHS system I want to be able to search for a specific product so that.Find with Blank Item</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+<span class='badge log badge-danger'>2</span>
+</span>
+<p class="name">@itemPage</p>
+<p class="duration text-sm">3 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@itemPage</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>06:01:06 AM</td>
+<td>
+<a href="#" class="linked" test-id='56' id='56'>As an administrator of the EHS system I want to se detailed information about a specific product so that I know that the system is up to date</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>06:01:06 AM</td>
+<td>
+<a href="#" class="linked" test-id='56' id='58'>validate the item1 details</a>
+<div class="">
+<span class="badge badge-default">As an administrator of the EHS system I want to se detailed information about a specific product so that I know that the system is up to date.validate the item1 details</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>06:01:16 AM</td>
+<td>
+<a href="#" class="linked" test-id='56' id='68'>Validate the tile of EHS Item screen</a>
+<div class="">
+<span class="badge badge-default">As an administrator of the EHS system I want to se detailed information about a specific product so that I know that the system is up to date.Validate the tile of EHS Item screen</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">org.junit.ComparisonFailure</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.junit.ComparisonFailure</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>06:00:47 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='33'>Then home page title should be "EHS - Home"</a>
+<div class="">
+<span class="badge badge-default">As an administrator of the EHS system I want to be able to see all the available products so that.Validate the EHS Home Page.Then home page title should be "EHS - Home"</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>06:01:34 AM</td>
+<td>
+<a href="#" class="linked" test-id='78' id='84'>Then user should get the product id "2"</a>
+<div class="">
+<span class="badge badge-default">As an administrator of the EHS system I want to be able to search for a specific product so that.Find the valid Item id.Then user should get the product id "2"</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@14e9bb345ef7e2ed3a102f271d84e9f0267c88e7/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>
