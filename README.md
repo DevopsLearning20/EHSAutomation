@@ -4,6 +4,8 @@
 
 Used a page object design pattern approach in this framework. Main advantage of this framework, it is easy to maintain. 
 
+I included html project in root folder. I will invoke index file once we run test runner class, no need to path configration it will take itself tested on Windows machine.
+
 **Tools**
 
 Design Pattern - Page Object Model using BY Class.
@@ -45,8 +47,9 @@ Constant layer - All constant managed in this class.
 Logger Layer - LOG4J used for maintain execution logs.
 
 **Enhancements**
-1. Grid Implementation
-2. Utility Enchnacement
+1. Grid Implementation.
+2. Utility Enchnacement.
+3. Parallel execution.
 
 **How to Run the project **
 
