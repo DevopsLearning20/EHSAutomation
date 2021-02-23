@@ -7,10 +7,15 @@ Used a page object design pattern approach in this framework. Main advantage of 
 **Tools**
 
 Design Pattern - Page Object Model using BY Class.
+
 BDD - Cucumber.
+
 Project Build - Maven. 
+
 Script - BDD,Java, JavaScript.
+
 TestFramwork - Junit.
+
 Reports - Spark Reports with screen shot, Cucumber 6.0 Html Report, PDF report.
 
 **Package Details**
