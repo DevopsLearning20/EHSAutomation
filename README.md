@@ -1,10 +1,11 @@
 # EHSAutomation
 
-Introduction about framework -  
-Used a page object design pattern approach in this framework. Main advantage of this framework, it is easy to maintain page based. I attacheed we execution project in root path
+**Introduction about framework **
 
+Used a page object design pattern approach in this framework. Main advantage of this framework, it is easy to maintain. 
 
-Tools -
+**Tools**
+
 Design Pattern - Page Object Model using BY Class.
 BDD - Cucumber.
 Project Build - Maven. 
@@ -12,7 +13,8 @@ Script - BDD,Java, JavaScript.
 TestFramwork - Junit.
 Reports - Spark Reports with screen shot, Cucumber 6.0 Html Report, PDF report.
 
-
+**Package Details
+==============**
 Framework divided in various layers of packages which is having their single responsibility.
 
 Feature Layer - In this package test cases are written in GHERKIN language, feature file is created based documentaion.All sceanrios are taged with diffrent tags, with the help of tags we can run testRunner file.
@@ -27,13 +29,13 @@ Test output - All execution reports stores in this folder.
 Constant layer - All constant managed in this class.
 Logger Layer - LOG4J used for maintain execution logs.
 
-enhancements
-===========
+**enhancements
+===========**
 1. Grid Implementation
 2. Utility Enchnacement
 
-How to Run the project 
-======================
+**How to Run the project 
+======================**
 
 Using IntelliJ IDE
 
